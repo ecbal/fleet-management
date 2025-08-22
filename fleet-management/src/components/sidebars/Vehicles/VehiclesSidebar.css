@@ -1,0 +1,49 @@
+.vehicles-sidebar-container {
+    position: absolute;
+    top: 80px;
+    bottom: 20px;
+    left: 20px;
+    width: 450px;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--bg);
+    border-radius: 20px;
+    font-family: var(--font-sans);
+}
+
+.vehicles-header {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--text);
+    padding: 10px 5%;
+    position: relative;
+}
+
+.vehicles-header h2{
+    margin: 0px;
+    display: inline-block;
+}
+
+.vehicles-header .top-buttons {
+    position: absolute;
+    right: 5%;
+    top: 10px;
+}
+
+.top-buttons .close-btn,
+.top-buttons .minimize-btn{
+    margin:0px 0px 0px 20px;
+}
+
+.top-buttons .close-btn:hover,
+.top-buttons .minimize-btn:hover{
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+}
+
+
+.vehicles-sidebar-container.minimized{
+    height: 40px;
+}

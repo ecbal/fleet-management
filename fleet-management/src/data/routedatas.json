@@ -1,0 +1,2366 @@
+[
+    {
+        "route_id": 5,
+        "route_short_name": "5",
+        "route_long_name": "NARLIDERE - ÜÇKUYULAR İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 6,
+        "route_short_name": "6",
+        "route_long_name": "ARIKENT - ÜÇKUYULAR İSK.",
+        "route_type": 3
+    },
+    {
+        "route_id": 7,
+        "route_short_name": "7",
+        "route_long_name": "SAHİLEVLERİ - ÜÇKUYULAR İSK.",
+        "route_type": 3
+    },
+    {
+        "route_id": 8,
+        "route_short_name": "8",
+        "route_long_name": "GÜZELBAHÇE - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9,
+        "route_short_name": "9",
+        "route_long_name": "ÖZZÜMRÜT EVLERİ - SİTELER",
+        "route_type": 3
+    },
+    {
+        "route_id": 10,
+        "route_short_name": "10",
+        "route_long_name": "ÜÇKUYULAR İSKELE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 15,
+        "route_short_name": "15",
+        "route_long_name": "İNÖNÜ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 16,
+        "route_short_name": "16",
+        "route_long_name": "VATAN MAHALLESİ - ÜÇYOL",
+        "route_type": 3
+    },
+    {
+        "route_id": 17,
+        "route_short_name": "17",
+        "route_long_name": "UZUNDERE TOPLU KONUTLARI - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 18,
+        "route_short_name": "18",
+        "route_long_name": "YEŞİLYURT - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 19,
+        "route_short_name": "19",
+        "route_long_name": "ŞEHİTLER - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 20,
+        "route_short_name": "20",
+        "route_long_name": "KOOPERATİF EVLERİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 21,
+        "route_short_name": "21",
+        "route_long_name": "HALİL RIFAT PAŞA - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 23,
+        "route_short_name": "23",
+        "route_long_name": "UZUNDERE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 24,
+        "route_short_name": "24",
+        "route_long_name": "KAVACIK - ÜÇKUYULAR İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 25,
+        "route_short_name": "25",
+        "route_long_name": "OYUNLAR KÖYÜ - ÜÇKUYULAR İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 27,
+        "route_short_name": "27",
+        "route_long_name": "ÇAMLIK - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 28,
+        "route_short_name": "28",
+        "route_long_name": "KAVACIK - GÜZELBAHÇE",
+        "route_type": 3
+    },
+    {
+        "route_id": 29,
+        "route_short_name": "29",
+        "route_long_name": "KADRİYE MAH. - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 32,
+        "route_short_name": "32",
+        "route_long_name": "ÇİMENTEPE SİTESİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 33,
+        "route_short_name": "33",
+        "route_long_name": "KADİFEKALE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 34,
+        "route_short_name": "34",
+        "route_long_name": "ESENTEPE - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 35,
+        "route_short_name": "35",
+        "route_long_name": "BALLIKUYU - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 36,
+        "route_short_name": "36",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 39,
+        "route_short_name": "39",
+        "route_long_name": "İSMETPAŞA MAH. - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 42,
+        "route_short_name": "42",
+        "route_long_name": "ÇINARTEPE - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 44,
+        "route_short_name": "44",
+        "route_long_name": "MERSİNPINAR - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 45,
+        "route_short_name": "45",
+        "route_long_name": "GÜLTEPE - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 46,
+        "route_short_name": "46",
+        "route_long_name": "ÇOBANÇEŞME - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 53,
+        "route_short_name": "53",
+        "route_long_name": "MTK ALTINDAĞ - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 54,
+        "route_short_name": "54",
+        "route_long_name": "OTOGAR - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 57,
+        "route_short_name": "57",
+        "route_long_name": "ALTINDAĞ - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 58,
+        "route_short_name": "58",
+        "route_long_name": "KANDERE - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 59,
+        "route_short_name": "59",
+        "route_long_name": "BORNOVA METRO - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 60,
+        "route_short_name": "60",
+        "route_long_name": "PINARBAŞI - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 64,
+        "route_short_name": "64",
+        "route_long_name": "AYAKKABICILAR SİT. - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 67,
+        "route_short_name": "67",
+        "route_long_name": "PINARBAŞI - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 72,
+        "route_short_name": "72",
+        "route_long_name": "İŞÇİEVLERİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 74,
+        "route_short_name": "74",
+        "route_long_name": "YENİGÜN MAH. - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 77,
+        "route_short_name": "77",
+        "route_long_name": "NAFİZ GÜRMAN - HALKAPINAR METRO 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 78,
+        "route_short_name": "78",
+        "route_long_name": "YAMANLAR - HALKAPINAR METRO 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 82,
+        "route_short_name": "82",
+        "route_long_name": "SİTELER - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 84,
+        "route_short_name": "84",
+        "route_long_name": "SALİH OMURTAK - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 89,
+        "route_short_name": "89",
+        "route_long_name": "CENNETOĞLU - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 92,
+        "route_short_name": "92",
+        "route_long_name": "FUAR İZMİR - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 102,
+        "route_short_name": "102",
+        "route_long_name": "ALPASLAN MAH. - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 104,
+        "route_short_name": "104",
+        "route_long_name": "BUCA TOPLU KONUTLARI - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 105,
+        "route_short_name": "105",
+        "route_long_name": "ÇAMLIKULE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 108,
+        "route_short_name": "108",
+        "route_long_name": "ESERKENT - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 111,
+        "route_short_name": "111",
+        "route_long_name": "NALDÖKEN - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 114,
+        "route_short_name": "114",
+        "route_long_name": "EVKA 3 - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 117,
+        "route_short_name": "117",
+        "route_long_name": "KAVAKLIDERE - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 119,
+        "route_short_name": "119",
+        "route_long_name": "ALTINDAĞ - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 121,
+        "route_short_name": "121",
+        "route_long_name": "MAVİŞEHİR AKTARMA MERKEZİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 123,
+        "route_short_name": "123",
+        "route_long_name": "ŞİRİNEVLER - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 124,
+        "route_short_name": "124",
+        "route_long_name": "ALİ FUAT ERDEN - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 125,
+        "route_short_name": "125",
+        "route_long_name": "MUSTAFA KEMAL MAH - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 126,
+        "route_short_name": "126",
+        "route_long_name": "CUMHURİYET MAH. - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 135,
+        "route_short_name": "135",
+        "route_long_name": "DOĞANÇAY - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 136,
+        "route_short_name": "136",
+        "route_long_name": "ÖRNEKKÖY - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 137,
+        "route_short_name": "137",
+        "route_long_name": "YAMANLAR - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 140,
+        "route_short_name": "140",
+        "route_long_name": "ÖRNEKKÖY - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 147,
+        "route_short_name": "147",
+        "route_long_name": "POSTACI - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 148,
+        "route_short_name": "148",
+        "route_long_name": "ONUR MAH. - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 149,
+        "route_short_name": "149",
+        "route_long_name": "KAKLIÇ - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 152,
+        "route_short_name": "152",
+        "route_long_name": "GAZİEMİR - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 153,
+        "route_short_name": "153",
+        "route_long_name": "ÇAMKULE - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 154,
+        "route_short_name": "154",
+        "route_long_name": "ALTINDAĞ - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 156,
+        "route_short_name": "156",
+        "route_long_name": "SAĞLIK OCAĞI - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 157,
+        "route_short_name": "157",
+        "route_long_name": "AKTEPE MAHALLESİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 167,
+        "route_short_name": "167",
+        "route_long_name": "BALÇOVA KABRİSTAN - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 168,
+        "route_short_name": "168",
+        "route_long_name": "EVKA 4 - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 171,
+        "route_short_name": "171",
+        "route_long_name": "TINAZTEPE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 176,
+        "route_short_name": "176",
+        "route_long_name": "DEMİRCİKÖY - ADATEPE",
+        "route_type": 3
+    },
+    {
+        "route_id": 177,
+        "route_short_name": "177",
+        "route_long_name": "KAYNAKLAR - ADATEPE",
+        "route_type": 3
+    },
+    {
+        "route_id": 193,
+        "route_short_name": "193",
+        "route_long_name": "YURTOĞLU - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 197,
+        "route_short_name": "197",
+        "route_long_name": "NAFİZ GÜRMAN - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 200,
+        "route_short_name": "200",
+        "route_long_name": "MAVİŞEHİR AKTARMA MERKEZİ - HAVALİMANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 202,
+        "route_short_name": "202",
+        "route_long_name": "CUMHURİYET MEYDANI - HAVALİMANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 204,
+        "route_short_name": "204",
+        "route_long_name": "BORNOVA METRO - HAVALİMANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 214,
+        "route_short_name": "214",
+        "route_long_name": "EVKA3 METRO - KEMER",
+        "route_type": 3
+    },
+    {
+        "route_id": 221,
+        "route_short_name": "221",
+        "route_long_name": "ŞEMİKLER - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 222,
+        "route_short_name": "222",
+        "route_long_name": "ŞEMİKLER - KARŞIYAKA İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 224,
+        "route_short_name": "224",
+        "route_long_name": "CENNETÇEŞME - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 227,
+        "route_short_name": "227",
+        "route_long_name": "ORGANİZE SANAYİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 229,
+        "route_short_name": "229",
+        "route_long_name": "YAKAKENT MAHALLESİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 233,
+        "route_short_name": "233",
+        "route_long_name": "ESBAŞ AKTARMA MERKEZİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 240,
+        "route_short_name": "240",
+        "route_long_name": "ZÜBEYDE HANIM MAH. - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 247,
+        "route_short_name": "247",
+        "route_long_name": "EVKA 6 - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 249,
+        "route_short_name": "249",
+        "route_long_name": "EVKA 4 - KEMER",
+        "route_type": 3
+    },
+    {
+        "route_id": 253,
+        "route_short_name": "253",
+        "route_long_name": "H.PINAR METRO 2 - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 258,
+        "route_short_name": "258",
+        "route_long_name": "ONUR MAH. - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 267,
+        "route_short_name": "267",
+        "route_long_name": "PINARBAŞI - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 268,
+        "route_short_name": "268",
+        "route_long_name": "DOĞANLAR - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 277,
+        "route_short_name": "277",
+        "route_long_name": "OTOGAR - TINAZTEPE",
+        "route_type": 3
+    },
+    {
+        "route_id": 285,
+        "route_short_name": "285",
+        "route_long_name": "EVKA 1 - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 290,
+        "route_short_name": "290",
+        "route_long_name": "BOSTANLI İSKELE - TINAZTEPE",
+        "route_type": 3
+    },
+    {
+        "route_id": 295,
+        "route_short_name": "295",
+        "route_long_name": "HARMANDALI - EGEKENT AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 302,
+        "route_short_name": "302",
+        "route_long_name": "OTOGAR - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 304,
+        "route_short_name": "304",
+        "route_long_name": "TINAZTEPE-KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 305,
+        "route_short_name": "305",
+        "route_long_name": "2. İNÖNÜ MAH. - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 311,
+        "route_short_name": "311",
+        "route_long_name": "İNCİRALTI - F.ALTAY",
+        "route_type": 3
+    },
+    {
+        "route_id": 314,
+        "route_short_name": "314",
+        "route_long_name": "EVKA 3 - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 315,
+        "route_short_name": "315",
+        "route_long_name": "KARAÇAM - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 316,
+        "route_short_name": "316",
+        "route_long_name": "BEŞYOL - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 317,
+        "route_short_name": "317",
+        "route_long_name": "KAVAKLIDERE - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 321,
+        "route_short_name": "321",
+        "route_long_name": "ÇAMLI - F. ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 322,
+        "route_short_name": "322",
+        "route_long_name": "MUSTAFA KEMAL MAHALLESİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 326,
+        "route_short_name": "326",
+        "route_long_name": "MUSTAFA KEMAL MAH. - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 328,
+        "route_short_name": "328",
+        "route_long_name": "BORNOVA METRO - SALHANE AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 329,
+        "route_short_name": "329",
+        "route_long_name": "GÜZELTEPE - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 330,
+        "route_short_name": "330",
+        "route_long_name": "BOSTANLI İSKELE - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 335,
+        "route_short_name": "335",
+        "route_long_name": "DOĞANÇAY - HALKAPINAR METRO 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 338,
+        "route_short_name": "338",
+        "route_long_name": "BORNOVA METRO - SALHANE AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 342,
+        "route_short_name": "342",
+        "route_long_name": "EGEKENT - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 344,
+        "route_short_name": "344",
+        "route_long_name": "EVKA 2 - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 346,
+        "route_short_name": "346",
+        "route_long_name": "EVKA 5 - EGEKENT AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 353,
+        "route_short_name": "353",
+        "route_long_name": "GAZİEMİR - TINAZTEPE",
+        "route_type": 3
+    },
+    {
+        "route_id": 358,
+        "route_short_name": "358",
+        "route_long_name": "PINARBAŞI - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 359,
+        "route_short_name": "359",
+        "route_long_name": "R.ŞEVKET İNCE MAH. - SALHANE AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 361,
+        "route_short_name": "361",
+        "route_long_name": "BAHRİYE ÜÇOK - KARŞIYAKA İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 365,
+        "route_short_name": "365",
+        "route_long_name": "KAYADİBİ - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 367,
+        "route_short_name": "367",
+        "route_long_name": "ÜMİT MAH. - KEMER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 368,
+        "route_short_name": "368",
+        "route_long_name": "ÜMİT MAH. - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 374,
+        "route_short_name": "374",
+        "route_long_name": "İZKENT - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 390,
+        "route_short_name": "390",
+        "route_long_name": "TINAZTEPE - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 412,
+        "route_short_name": "412",
+        "route_long_name": "TINAZTEPE - YERLEŞKE",
+        "route_type": 3
+    },
+    {
+        "route_id": 418,
+        "route_short_name": "418",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - H.PINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 423,
+        "route_short_name": "423",
+        "route_long_name": "ŞİRİNEVLER - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 428,
+        "route_short_name": "428",
+        "route_long_name": "EGEKENT 2 - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 429,
+        "route_short_name": "429",
+        "route_long_name": "GÜZELTEPE - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 430,
+        "route_short_name": "430",
+        "route_long_name": "YAKAKENT MAHALLESİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 434,
+        "route_short_name": "434",
+        "route_long_name": "KÖRFEZ MAHALLESI - HALKAPINAR METRO 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 435,
+        "route_short_name": "435",
+        "route_long_name": "KÖRFEZ MAHALLESI - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 441,
+        "route_short_name": "441",
+        "route_long_name": "ÇINARTEPE - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 442,
+        "route_short_name": "442",
+        "route_long_name": "ATATÜRK MAHALLESİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 443,
+        "route_short_name": "443",
+        "route_long_name": "EGEKENT - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 445,
+        "route_short_name": "445",
+        "route_long_name": "EVKA 2 - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 446,
+        "route_short_name": "446",
+        "route_long_name": "EVKA 5 - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 447,
+        "route_short_name": "447",
+        "route_long_name": "EVKA 6 - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 449,
+        "route_short_name": "449",
+        "route_long_name": "İZYUVA - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 465,
+        "route_short_name": "465",
+        "route_long_name": "TINAZTEPE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 466,
+        "route_short_name": "466",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 476,
+        "route_short_name": "476",
+        "route_long_name": "TINAZTEPE - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 477,
+        "route_short_name": "477",
+        "route_long_name": "NAFİZ GÜRMAN - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 480,
+        "route_short_name": "480",
+        "route_long_name": "İNCİRALTI - ÜÇKUYULAR İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 484,
+        "route_short_name": "484",
+        "route_long_name": "YEŞİLBAĞLAR - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 485,
+        "route_short_name": "485",
+        "route_long_name": "GAZİEMİR İLÇE TERMİNALİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 486,
+        "route_short_name": "486",
+        "route_long_name": "OYAK SİTESİ - İNCİRALTI",
+        "route_type": 3
+    },
+    {
+        "route_id": 487,
+        "route_short_name": "487",
+        "route_long_name": "DEMİRKÖPRÜ - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 490,
+        "route_short_name": "490",
+        "route_long_name": "TINAZTEPE - ÜÇYOL",
+        "route_type": 3
+    },
+    {
+        "route_id": 498,
+        "route_short_name": "498",
+        "route_long_name": "BORNOVA METRO - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 501,
+        "route_short_name": "501",
+        "route_long_name": "ÇİÇEK MAH. - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 502,
+        "route_short_name": "502",
+        "route_long_name": "CENGİZHAN - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 504,
+        "route_short_name": "504",
+        "route_long_name": "FUAT EDİP BAKSI - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 505,
+        "route_short_name": "505",
+        "route_long_name": "ÇAMKULE - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 508,
+        "route_short_name": "508",
+        "route_long_name": "MENDERES - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 510,
+        "route_short_name": "510",
+        "route_long_name": "GAZİEMİR - BALÇOVA",
+        "route_type": 3
+    },
+    {
+        "route_id": 513,
+        "route_short_name": "513",
+        "route_long_name": "GAZİ MEYDANI - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 515,
+        "route_short_name": "515",
+        "route_long_name": "TINAZTEPE - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 517,
+        "route_short_name": "517",
+        "route_long_name": "UZUNDERE TOPLU KONUTLARI - F.ALTAY ",
+        "route_type": 3
+    },
+    {
+        "route_id": 520,
+        "route_short_name": "520",
+        "route_long_name": "SALİH OMURTAK - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 523,
+        "route_short_name": "523",
+        "route_long_name": "UZUNDERE - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 524,
+        "route_short_name": "524",
+        "route_long_name": "CENNETÇEŞME - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 529,
+        "route_short_name": "529",
+        "route_long_name": "YAKAKENT MAHALLESİ - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 543,
+        "route_short_name": "543",
+        "route_long_name": "BOSTANLI İSKELE - H.PINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 547,
+        "route_short_name": "547",
+        "route_long_name": "ÇİĞLİ AKTARMA MERKEZİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 550,
+        "route_short_name": "550",
+        "route_long_name": "GÜNALTAY - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 551,
+        "route_short_name": "551",
+        "route_long_name": "NARLIDERE - F.ALTAY",
+        "route_type": 3
+    },
+    {
+        "route_id": 555,
+        "route_short_name": "555",
+        "route_long_name": "OTOGAR - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 556,
+        "route_short_name": "556",
+        "route_long_name": "ÇAMLIK - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 560,
+        "route_short_name": "560",
+        "route_long_name": "PINARBAŞI - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 564,
+        "route_short_name": "564",
+        "route_long_name": "AYAKKABICILAR SİTESİ - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 565,
+        "route_short_name": "565",
+        "route_long_name": "EVKA 4 - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 566,
+        "route_short_name": "566",
+        "route_long_name": "EVKA 4 - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 568,
+        "route_short_name": "568",
+        "route_long_name": "EVKA 4 - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 570,
+        "route_short_name": "570",
+        "route_long_name": "LAKA MAHALLESİ - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 579,
+        "route_short_name": "579",
+        "route_long_name": "YEŞİLYURT - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 584,
+        "route_short_name": "584",
+        "route_long_name": "İNÖNÜ MAH. - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 585,
+        "route_short_name": "585",
+        "route_long_name": "EVKA 4 - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 587,
+        "route_short_name": "587",
+        "route_long_name": "LİMONTEPE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 588,
+        "route_short_name": "588",
+        "route_long_name": "YENİ ÇAMLIK - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 595,
+        "route_short_name": "595",
+        "route_long_name": "9 EYLÜL MAHALLESI - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 596,
+        "route_short_name": "596",
+        "route_long_name": "KATIP ÇELEBI ÜNIVERSITESI - EGEKENT AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 599,
+        "route_short_name": "599",
+        "route_long_name": "M.ERENER - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 610,
+        "route_short_name": "610",
+        "route_long_name": "FUAR İZMİR - GAZİEMİR SEMT GARAJI",
+        "route_type": 3
+    },
+    {
+        "route_id": 650,
+        "route_short_name": "650",
+        "route_long_name": "FUAR İZMİR - BALÇOVA",
+        "route_type": 3
+    },
+    {
+        "route_id": 662,
+        "route_short_name": "662",
+        "route_long_name": "CENGİZHAN - KEMER",
+        "route_type": 3
+    },
+    {
+        "route_id": 671,
+        "route_short_name": "671",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 676,
+        "route_short_name": "676",
+        "route_long_name": "TINAZTEPE - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 690,
+        "route_short_name": "690",
+        "route_long_name": "TINAZTEPE - F.ALTAY ",
+        "route_type": 3
+    },
+    {
+        "route_id": 699,
+        "route_short_name": "699",
+        "route_long_name": "M.ERENER - KEMER",
+        "route_type": 3
+    },
+    {
+        "route_id": 701,
+        "route_short_name": "701",
+        "route_long_name": "TORBALI - TEKELİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 705,
+        "route_short_name": "705",
+        "route_long_name": "AYRANCILAR - SARNIÇ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 707,
+        "route_short_name": "707",
+        "route_long_name": "PANCAR AKTARMA MERKEZİ - MENDERES",
+        "route_type": 3
+    },
+    {
+        "route_id": 709,
+        "route_short_name": "709",
+        "route_long_name": "DEMİRCİ - PANCAR AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 710,
+        "route_short_name": "710",
+        "route_long_name": "YAZIBAŞI - KUŞÇUBURUN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 712,
+        "route_short_name": "712",
+        "route_long_name": "PANCAR AKTARMA - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 721,
+        "route_short_name": "721",
+        "route_long_name": "KARAKUYU - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 722,
+        "route_short_name": "722",
+        "route_long_name": "YAZIBAŞI - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 724,
+        "route_short_name": "724",
+        "route_long_name": "ŞEHİTLER - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 727,
+        "route_short_name": "727",
+        "route_long_name": "BAYINDIR - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 728,
+        "route_short_name": "728",
+        "route_long_name": "KISIK SANAYİ - SARNIÇ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 729,
+        "route_short_name": "729",
+        "route_long_name": "ATAKÖY - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 732,
+        "route_short_name": "732",
+        "route_long_name": "SEFERİHİSAR - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 733,
+        "route_short_name": "733",
+        "route_long_name": "YAĞCILAR - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 734,
+        "route_short_name": "734",
+        "route_long_name": "ÖZBEK - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 737,
+        "route_short_name": "737",
+        "route_long_name": "KADIOVACIK - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 738,
+        "route_short_name": "738",
+        "route_long_name": "ÇEŞMEALTI - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 741,
+        "route_short_name": "741",
+        "route_long_name": "YAMANLAR KÖYÜ - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 742,
+        "route_short_name": "742",
+        "route_long_name": "SANCAKLI KÖYÜ - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 744,
+        "route_short_name": "744",
+        "route_long_name": "FOÇA - HATUNDERE AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 745,
+        "route_short_name": "745",
+        "route_long_name": "YENİFOÇA - BİÇEROVA AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 751,
+        "route_short_name": "751",
+        "route_long_name": "SASALI - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 760,
+        "route_short_name": "760",
+        "route_long_name": "ÇEŞME-URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 761,
+        "route_short_name": "761",
+        "route_long_name": "KARABURUN-URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 766,
+        "route_short_name": "766",
+        "route_long_name": "ANSIZCA - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 767,
+        "route_short_name": "767",
+        "route_long_name": "HALİLBEYLİ - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 768,
+        "route_short_name": "768",
+        "route_long_name": "VİŞNELİ - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 769,
+        "route_short_name": "769",
+        "route_long_name": "ÇAMBEL - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 770,
+        "route_short_name": "770",
+        "route_long_name": "SELÇUK - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 772,
+        "route_short_name": "772",
+        "route_long_name": "BEŞPINAR - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 775,
+        "route_short_name": "775",
+        "route_long_name": "ÖZDERE - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 776,
+        "route_short_name": "776",
+        "route_long_name": "DOĞANBEY - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 777,
+        "route_short_name": "777",
+        "route_long_name": "DOĞAL YAŞAM PARKI - KARŞIYAKA",
+        "route_type": 3
+    },
+    {
+        "route_id": 778,
+        "route_short_name": "778",
+        "route_long_name": "ÖZDERE - ÜRKMEZ",
+        "route_type": 3
+    },
+    {
+        "route_id": 780,
+        "route_short_name": "780",
+        "route_long_name": "BÜLBÜLDERE - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 781,
+        "route_short_name": "781",
+        "route_long_name": "TULUMKÖY - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 782,
+        "route_short_name": "782",
+        "route_long_name": "TAŞKESİK - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 783,
+        "route_short_name": "783",
+        "route_long_name": "BELEVİ - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 784,
+        "route_short_name": "784",
+        "route_long_name": "DOĞANCILAR - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 785,
+        "route_short_name": "785",
+        "route_long_name": "DAĞTEKKE - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 786,
+        "route_short_name": "786",
+        "route_long_name": "KARAOT - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 787,
+        "route_short_name": "787",
+        "route_long_name": "OSMANLAR - BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 788,
+        "route_short_name": "788",
+        "route_long_name": "HAVUZBAŞI - BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 789,
+        "route_short_name": "789",
+        "route_long_name": "EFEMÇUKURU - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 790,
+        "route_short_name": "790",
+        "route_long_name": "HİSARLIK - BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 791,
+        "route_short_name": "791",
+        "route_long_name": "ÇAMLIBEL - BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 792,
+        "route_short_name": "792",
+        "route_long_name": "GÖLOVA - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 793,
+        "route_short_name": "793",
+        "route_long_name": "BALCILAR - BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 795,
+        "route_short_name": "795",
+        "route_long_name": "ÖDEMİŞ-TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 796,
+        "route_short_name": "796",
+        "route_long_name": "BEYDAĞ-ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 798,
+        "route_short_name": "798",
+        "route_long_name": "TİRE-TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 804,
+        "route_short_name": "804",
+        "route_long_name": "DEREKÖY - CUMAOVASI AKTARMA MERKEZI",
+        "route_type": 3
+    },
+    {
+        "route_id": 805,
+        "route_short_name": "805",
+        "route_long_name": "ÇAMLIKULE - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 808,
+        "route_short_name": "808",
+        "route_long_name": "CUMAOVASI AKTARMA MERKEZİ - ESBAŞ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 810,
+        "route_short_name": "810",
+        "route_long_name": "ATATÜRK MAHALLESİ - EGEKENT AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 811,
+        "route_short_name": "811",
+        "route_long_name": "ENGELLİLER MERKEZİ - MONTRÖ",
+        "route_type": 3
+    },
+    {
+        "route_id": 814,
+        "route_short_name": "814",
+        "route_long_name": "MENDERES - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 817,
+        "route_short_name": "817",
+        "route_long_name": "EGEKENT AKTARMA MERKEZİ - ÇİĞLİ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 818,
+        "route_short_name": "818",
+        "route_long_name": "ESBAŞ AKTARMA MERKEZİ - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 820,
+        "route_short_name": "820",
+        "route_long_name": "HARMANDALI - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 821,
+        "route_short_name": "821",
+        "route_long_name": "MAVİŞEHİR AKTARMA MERKEZİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 823,
+        "route_short_name": "823",
+        "route_long_name": "ÜÇYOL - GAZİEMİR SEMT GARAJI",
+        "route_type": 3
+    },
+    {
+        "route_id": 827,
+        "route_short_name": "827",
+        "route_long_name": "ULUKENT AKTARMA MERKEZİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 828,
+        "route_short_name": "828",
+        "route_long_name": "SARNIÇ - YENİ ÇAMLIK",
+        "route_type": 3
+    },
+    {
+        "route_id": 829,
+        "route_short_name": "829",
+        "route_long_name": "ÜRKMEZ - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 835,
+        "route_short_name": "835",
+        "route_long_name": "BERGAMA - ALİAĞA AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 836,
+        "route_short_name": "836",
+        "route_long_name": "KINIK-BERGAMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 837,
+        "route_short_name": "837",
+        "route_long_name": "DİKİLİ-ALİAĞA AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 838,
+        "route_short_name": "838",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 847,
+        "route_short_name": "847",
+        "route_long_name": "POSTACILAR MAHALLESİ - KARŞIYAKA İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 853,
+        "route_short_name": "853",
+        "route_long_name": "EGEKENT AKTARMA MERKEZİ - KARŞIYAKA İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 866,
+        "route_short_name": "866",
+        "route_long_name": "BUCA TOPLU KONUTLARI - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 871,
+        "route_short_name": "871",
+        "route_long_name": "İŞÇİEVLERİ - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 874,
+        "route_short_name": "874",
+        "route_long_name": "İZKENT - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 875,
+        "route_short_name": "875",
+        "route_long_name": "EVKA 1 - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 876,
+        "route_short_name": "876",
+        "route_long_name": "ŞİRİNKAPI - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 877,
+        "route_short_name": "877",
+        "route_long_name": "UZUNDERE TOPLU KONUTLARI - GAZİEMİR SEMT GARAJI",
+        "route_type": 3
+    },
+    {
+        "route_id": 878,
+        "route_short_name": "878",
+        "route_long_name": "TINAZTEPE - ŞİRİNYER AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 879,
+        "route_short_name": "879",
+        "route_long_name": "F.ALTAY - GAZİEMİR SEMT GARAJI",
+        "route_type": 3
+    },
+    {
+        "route_id": 887,
+        "route_short_name": "887",
+        "route_long_name": "SARNIÇ AKTARMA MERKEZİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 889,
+        "route_short_name": "889",
+        "route_long_name": "SARNIÇ - SARNIÇ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 891,
+        "route_short_name": "891",
+        "route_long_name": "EVKA 7 - GAZİEMİR SEMT GARAJI",
+        "route_type": 3
+    },
+    {
+        "route_id": 910,
+        "route_short_name": "910",
+        "route_long_name": "GAZİEMİR - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 920,
+        "route_short_name": "920",
+        "route_long_name": "ÇİĞLİ - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 930,
+        "route_short_name": "930",
+        "route_long_name": "BORNOVA - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 940,
+        "route_short_name": "940",
+        "route_long_name": "BUCA - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 945,
+        "route_short_name": "945",
+        "route_long_name": "ESENTEPE - ÜÇKUYULAR İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 950,
+        "route_short_name": "950",
+        "route_long_name": "NARLIDERE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 969,
+        "route_short_name": "969",
+        "route_long_name": "BALÇOVA - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 971,
+        "route_short_name": "971",
+        "route_long_name": "NARBEL - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 986,
+        "route_short_name": "986",
+        "route_long_name": "ÜRKMEZ - SEFERİHİSAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 990,
+        "route_short_name": "990",
+        "route_long_name": "BEYLER - SEFERİHİSAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9006,
+        "route_short_name": "713",
+        "route_long_name": "DEÜ MESLEK YÜKSEK OKULU - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9007,
+        "route_short_name": "714",
+        "route_long_name": "DEÜ MESLEK YÜKSEK OKULU - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9013,
+        "route_short_name": "985",
+        "route_long_name": "SEFERİHİSAR - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9014,
+        "route_short_name": "640",
+        "route_long_name": "SIĞACIK - SEFERİHİSAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9017,
+        "route_short_name": "963",
+        "route_long_name": "EVKA 3 METRO - ALSANCAK GAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9019,
+        "route_short_name": "912",
+        "route_long_name": "EGEKENT AKTARMA MERKEZİ - ALSANCAK GAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9020,
+        "route_short_name": "470",
+        "route_long_name": "TINAZTEPE - LOZAN MEYDANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9021,
+        "route_short_name": "680",
+        "route_long_name": "BOZYAKA - LOZAN MEYDANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9022,
+        "route_short_name": "691",
+        "route_long_name": "GAZİEMİR - LOZAN MEYDAN",
+        "route_type": 3
+    },
+    {
+        "route_id": 9024,
+        "route_short_name": "681",
+        "route_long_name": "F.ALTAY - LOZAN MEYDANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9025,
+        "route_short_name": "951",
+        "route_long_name": "LOZAN MEYDANI - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 9039,
+        "route_short_name": "984",
+        "route_long_name": "URLA - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9048,
+        "route_short_name": "981",
+        "route_long_name": "BALIKLIOVA - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9049,
+        "route_short_name": "982",
+        "route_long_name": "İYTE - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9050,
+        "route_short_name": "983",
+        "route_long_name": "BADEMLER - F.ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9055,
+        "route_short_name": "988",
+        "route_long_name": "KEMALPAŞA - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9057,
+        "route_short_name": "873",
+        "route_long_name": "YENİTEPE EVLERİ - FAHRETTİN ALTAY AKTARMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9069,
+        "route_short_name": "882",
+        "route_long_name": "İYTE - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9071,
+        "route_short_name": "41",
+        "route_long_name": "LEVENT - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 9072,
+        "route_short_name": "816",
+        "route_long_name": "ÇİĞLİ BÖLGE EĞİTİM HASTANESİ - EGEKENT AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9075,
+        "route_short_name": "987",
+        "route_long_name": "ÜRKMEZ - F. ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9077,
+        "route_short_name": "883",
+        "route_long_name": "İYTE - F.ALTAY AKT. MER. EKSPRES",
+        "route_type": 3
+    },
+    {
+        "route_id": 9142,
+        "route_short_name": "975",
+        "route_long_name": "SEFERİHİSAR - F.ALTAY AKTARMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9143,
+        "route_short_name": "991",
+        "route_long_name": "ÇAMTEPE - SEFERİHİSAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9145,
+        "route_short_name": "989",
+        "route_long_name": "ORHANLI - SEFERİHİSAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9157,
+        "route_short_name": "966",
+        "route_long_name": "ULUCAK - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9158,
+        "route_short_name": "799",
+        "route_long_name": "ÇATALCA - CUMAOVASI AKTARMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9159,
+        "route_short_name": "834",
+        "route_long_name": "YENİ MAHALLE - ALİAĞA AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9161,
+        "route_short_name": "491",
+        "route_long_name": "EVKA 7 - SARNIÇ AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9162,
+        "route_short_name": "692",
+        "route_long_name": "KARAKUYU - PANCAR AKTARMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9163,
+        "route_short_name": "236",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - GÜMRÜK",
+        "route_type": 3
+    },
+    {
+        "route_id": 9164,
+        "route_short_name": "831",
+        "route_long_name": "DEMİRCİDERE - BERGAMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9165,
+        "route_short_name": "832",
+        "route_long_name": "YUKARICUMA - BERGAMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9166,
+        "route_short_name": "833",
+        "route_long_name": "GÜNEŞLİ - BERGAMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9170,
+        "route_short_name": "715",
+        "route_long_name": "DEÜ MESLEK YÜKSEK OKULU - TORBALI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9171,
+        "route_short_name": "719",
+        "route_long_name": "ÇAPAK - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9172,
+        "route_short_name": "794",
+        "route_long_name": "KÜNER - CUMAOVASI AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9173,
+        "route_short_name": "774",
+        "route_long_name": "TİRE TOPLU KONUTLAR - KAHRAT",
+        "route_type": 3
+    },
+    {
+        "route_id": 9174,
+        "route_short_name": "577",
+        "route_long_name": "NAFİZ GÜRMAN-HALKAPINAR METRO 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 9177,
+        "route_short_name": "961",
+        "route_long_name": "İÇMELER - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9178,
+        "route_short_name": "575",
+        "route_long_name": "MALİYECİLER MAHALLESİ - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9180,
+        "route_short_name": "426",
+        "route_long_name": "MUSTAFA KEMAL MAH - HALKAPINAR METRO2",
+        "route_type": 3
+    },
+    {
+        "route_id": 9181,
+        "route_short_name": "206",
+        "route_long_name": "ŞİRİNYER AKTARMA MERKEZİ - HAVALİMANI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9231,
+        "route_short_name": "758",
+        "route_long_name": "ÇUKURKÖY - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9232,
+        "route_short_name": "755",
+        "route_long_name": "SÜLEYMANLI - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9233,
+        "route_short_name": "754",
+        "route_long_name": "BOZALAN - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9234,
+        "route_short_name": "747",
+        "route_long_name": "EMİRALEM - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9235,
+        "route_short_name": "753",
+        "route_long_name": "GÖKTEPE - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9236,
+        "route_short_name": "759",
+        "route_long_name": "KARAORMAN - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9237,
+        "route_short_name": "868",
+        "route_long_name": "MENEMEN PLASTİK İHTİSAS ORGANİZE SANAYİ - ATATÜRK MAHALLESİ - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9238,
+        "route_short_name": "748",
+        "route_long_name": "ULUKENT AKTARMA MERKEZİ 1- MENEMEN AKTARMA MERKEZİ ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9239,
+        "route_short_name": "658",
+        "route_long_name": "TOKİ - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9240,
+        "route_short_name": "848",
+        "route_long_name": "KOYUNDERE - ULUKENT AKTARMA MERKEZİ 1",
+        "route_type": 3
+    },
+    {
+        "route_id": 9243,
+        "route_short_name": "842",
+        "route_long_name": "ZEYTİNDAĞ - BERGAMA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9244,
+        "route_short_name": "559",
+        "route_long_name": "BAYRAKLI TOPLU KONUTLARI - EVKA3 METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9245,
+        "route_short_name": "303",
+        "route_long_name": "BUCA HEYKEL - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 9246,
+        "route_short_name": "698",
+        "route_long_name": "ASARLIK TOPLU KONUTLARI - ULUKENT AKTARMA MERKEZİ 1",
+        "route_type": 3
+    },
+    {
+        "route_id": 9247,
+        "route_short_name": "909",
+        "route_long_name": "ZEYTİNALANI - F. ALTAY AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9248,
+        "route_short_name": "684",
+        "route_long_name": "URLA - F.ALTAY AKT. MER. EKSPRES",
+        "route_type": 3
+    },
+    {
+        "route_id": 9249,
+        "route_short_name": "675",
+        "route_long_name": "SEFERİHİSAR - F.ALTAY AKT. MER. EKSPRES",
+        "route_type": 3
+    },
+    {
+        "route_id": 9263,
+        "route_short_name": "763",
+        "route_long_name": "DÜVERLİK - TORBALI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9264,
+        "route_short_name": "660",
+        "route_long_name": "YENİ FOÇA - İZMİR OTOGAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9266,
+        "route_short_name": "664",
+        "route_long_name": "YENİ FOÇA - ESKI FOÇA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9267,
+        "route_short_name": "665",
+        "route_long_name": "YENİ FOÇA - SİTELER",
+        "route_type": 3
+    },
+    {
+        "route_id": 9268,
+        "route_short_name": "666",
+        "route_long_name": "YENİ FOÇA - KOZBEYLI",
+        "route_type": 3
+    },
+    {
+        "route_id": 9269,
+        "route_short_name": "979",
+        "route_long_name": "ÖMÜR BELDESİ - SEFERİHİSAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9270,
+        "route_short_name": "532",
+        "route_long_name": "BAYRAKLI ŞEHİR HASTANESİ - BOSTANLI İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 9283,
+        "route_short_name": "609",
+        "route_long_name": "KÖFÜNDERE-ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9284,
+        "route_short_name": "611",
+        "route_long_name": "ÇAYLI-ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9286,
+        "route_short_name": "616",
+        "route_long_name": "KAYMAKÇI-ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9288,
+        "route_short_name": "621",
+        "route_long_name": "KURUCUOVA-ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9290,
+        "route_short_name": "618",
+        "route_long_name": "ERTUĞRULKÖY-ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9300,
+        "route_short_name": "539",
+        "route_long_name": "YENİTEPE EVLERİ - SALHANE AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9305,
+        "route_short_name": "558",
+        "route_long_name": "BAYRAKLI TOPLU KONUTLARI - BORNOVA METRO EKSPRES",
+        "route_type": 3
+    },
+    {
+        "route_id": 9306,
+        "route_short_name": "471",
+        "route_long_name": "TINAZTEPE - KONAK",
+        "route_type": 3
+    },
+    {
+        "route_id": 9307,
+        "route_short_name": "557",
+        "route_long_name": "BAYRAKLI TOPLU KONUTLAR - BAYRAKLI İZBAN ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9308,
+        "route_short_name": "656",
+        "route_long_name": "DEVLET HASTANESİ - DİKİLİSULTAN",
+        "route_type": 3
+    },
+    {
+        "route_id": 9391,
+        "route_short_name": "534",
+        "route_long_name": "BAYRAKLI ŞEHİR HASTANESI -  HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9394,
+        "route_short_name": "668",
+        "route_long_name": "NAZARKÖY - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9414,
+        "route_short_name": "978",
+        "route_long_name": "KÜÇÜKBAHÇE-URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9469,
+        "route_short_name": "678",
+        "route_long_name": "ALANKIYI-BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9470,
+        "route_short_name": "679",
+        "route_long_name": "SARIYURT-BAYINDIR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9473,
+        "route_short_name": "967",
+        "route_long_name": "AŞAĞIKIZILCA - KEMALPAŞA",
+        "route_type": 3
+    },
+    {
+        "route_id": 313,
+        "route_short_name": "313",
+        "route_long_name": "YENİ MEZARLIK - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9183,
+        "route_short_name": "364",
+        "route_long_name": "GERİKAZANIMCILAR SİTESİ - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9184,
+        "route_short_name": "806",
+        "route_long_name": "KİRAZ - OTOGAR",
+        "route_type": 3
+    },
+    {
+        "route_id": 9185,
+        "route_short_name": "801",
+        "route_long_name": "KİRAZ - BEYDAĞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9186,
+        "route_short_name": "803",
+        "route_long_name": "KİRAZ - ÖDEMİŞ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9187,
+        "route_short_name": "522",
+        "route_long_name": "UZUNDERE TOPLU KONUTLARI - ÜÇYOL METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9190,
+        "route_short_name": "800",
+        "route_long_name": "MENEMEN AKTARMA - BORNOVA METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9200,
+        "route_short_name": "597",
+        "route_long_name": "M. ERENER - BAYRAKLI SEVGİ YOLU ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9203,
+        "route_short_name": "602",
+        "route_long_name": "MENEMEN AKTARMA - İZMİR OTOGAR ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9204,
+        "route_short_name": "608",
+        "route_long_name": "EGEKENT 2 - İZMİR OTOGAR ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9205,
+        "route_short_name": "128",
+        "route_long_name": "EGEKENT 2 - EGEKENT AKTARMA ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9209,
+        "route_short_name": "475",
+        "route_long_name": "TINAZTEPE ÜNİVERSİTESİ - HALKAPINAR METRO",
+        "route_type": 3
+    },
+    {
+        "route_id": 9210,
+        "route_short_name": "762",
+        "route_long_name": "GÜZELBAHÇE - URLA",
+        "route_type": 3
+    },
+    {
+        "route_id": 9211,
+        "route_short_name": "746",
+        "route_long_name": "ÇAKMAKLI - BİÇEROVA AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9212,
+        "route_short_name": "196",
+        "route_long_name": "NAFİZ GÜRMAN - KARŞIYAKA İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 9214,
+        "route_short_name": "977",
+        "route_long_name": "İZMİR DEMOKRASİ ÜNİVERSİTESİ - ÜÇKUYULAR İSKELE",
+        "route_type": 3
+    },
+    {
+        "route_id": 9215,
+        "route_short_name": "743",
+        "route_long_name": "TİRE - BELEVİ İZBAN",
+        "route_type": 3
+    },
+    {
+        "route_id": 9220,
+        "route_short_name": "756",
+        "route_long_name": "KOZBEYLİ - MENEMEN AKTARMA ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9221,
+        "route_short_name": "750",
+        "route_long_name": "YENİ FOÇA - ULUKENT AKTARMA MERKEZİ 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 9222,
+        "route_short_name": "757",
+        "route_long_name": "MALTEPE - ULUKENT AKTARMA MERKEZİ 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 9223,
+        "route_short_name": "619",
+        "route_long_name": "SEYREK - ULUKENT AKTARMA MERKEZİ 2 ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9225,
+        "route_short_name": "850",
+        "route_long_name": "TUZÇULLU -SEYREK - ULUKENT AKTARMA MERKEZİ 2",
+        "route_type": 3
+    },
+    {
+        "route_id": 9226,
+        "route_short_name": "695",
+        "route_long_name": "ULUKENT KOOP - EGEKENT AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9227,
+        "route_short_name": "749",
+        "route_long_name": "ULUKENT AKTARMA MERKEZİ 1 - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9228,
+        "route_short_name": "826",
+        "route_long_name": "GAZİ MAHALLESI - ULUKENT AKTARMA MERKEZİ 1",
+        "route_type": 3
+    },
+    {
+        "route_id": 9229,
+        "route_short_name": "648",
+        "route_long_name": "GAZİ MAHALLESİ - MENEMEN AKTARMA MERKEZİ",
+        "route_type": 3
+    },
+    {
+        "route_id": 9230,
+        "route_short_name": "752",
+        "route_long_name": "BURUNCUK - HATUNDERE AKTARMA MERKEZİ",
+        "route_type": 3
+    }
+]

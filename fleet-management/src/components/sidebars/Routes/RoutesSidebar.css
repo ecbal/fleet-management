@@ -1,0 +1,131 @@
+.routes-sidebar-container {
+    position: absolute;
+    top: 80px;
+    bottom: 20px;
+    left: 20px;
+    width: 450px;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--bg);
+    border-radius: 20px;
+    font-family: var(--font-sans);
+}
+
+.routes-header {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--text);
+    padding: 10px 5%;
+    position: relative;
+}
+
+.routes-header h2 {
+    margin: 0;
+    display: inline-block;
+}
+
+.routes-header .top-buttons {
+    position: absolute;
+    right: 5%;
+    top: 10px;
+}
+
+.top-buttons .close-btn,
+.top-buttons .minimize-btn{
+    margin:0px 0px 0px 20px;
+}
+
+.top-buttons .close-btn:hover,
+.top-buttons .minimize-btn:hover{
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+}
+
+.search-bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding-bottom: 6px;
+    background: var(--bg);
+}
+
+.routes-table-div {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0 3% 0 3%;
+    text-align: left;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.routes-table-div::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--brand) 45%, transparent);
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+}
+
+.routes-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    background: var(--surface);
+    border-radius: var(--radius);
+}
+
+.routes-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--border);
+    color: var(--text);
+}
+
+.routes-table th,
+.routes-table td {
+    text-align: left;
+    padding: 2px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.routes-table th:first-child,
+.routes-table td:first-child {
+    width: 32px;
+}
+
+.routes-table th:nth-child(2),
+.routes-table td:nth-child(2) {
+    width: 32px;
+    font-weight: 700;
+}
+
+.routes-table tbody tr:nth-child(odd) {
+    background: var(--surface);
+}
+
+.routes-table tbody tr:nth-child(even) {
+    background: var(--bg-soft);
+}
+
+.routes-table tbody tr:hover {
+    background: var(--surface-hover);
+}
+
+input[type='checkbox'] {
+    accent-color: var(--brand);
+}
+
+.routes-sidebar-container.minimized{
+    height: 40px;
+}

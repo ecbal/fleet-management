@@ -1,0 +1,45 @@
+.navbar-container{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    height: auto;
+    background-color: var(--bg);
+    width: auto;
+    z-index: 1000;    
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+    transition: left 0.3s ease-in-out;
+}
+
+.nav-item{
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: var(--icon-bg);
+    color: var(--icon-fg);
+    transition: 0.3s;
+}
+
+.nav-item:hover{
+    background-color: var(--icon-hover);
+    transition: 0.3s;
+}
+
+.nav-item.active{
+    background-color: var(--icon-active);
+}
+
+.nav-item.active:hover{
+    background-color: var(--icon-hover);
+}
+
+/* @media (max-width: 768px) {
+    .navbar-container{
+        left: -100px;
+        transition: left 0.3s ease-in-out; 
+    }
+} */
