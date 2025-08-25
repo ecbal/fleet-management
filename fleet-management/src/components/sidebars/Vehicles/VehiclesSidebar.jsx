@@ -1,8 +1,7 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter, faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
 import './VehiclesSidebar.css'
-import vehicleData from '../../../data/vehicledatas.json';
 
 
 // 1) Kolon başlık metinleri (ekranda görünecek isimler)
@@ -74,6 +73,22 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
   const [vehiclesExpanded, setVehiclesExpanded] = useState(false);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(30);
+  const [rows, setRows] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const inFlight = useRef({ abort: () => { } });
+  const [hasMore,setHasMore] = useState(false);
+
+
+  const totalPages = useMemo(() => {
+  if (Number.isFinite(total) && total > 0) {
+    return Math.max(1, Math.ceil(total / pageSize));
+  }
+  return hasMore ? page + 1 : page;
+}, [total, pageSize, hasMore, page]);
+
+
   const [filters, setFilters] = useState(() => {
     const init = {};
     COL_ORDER.forEach((k) => {
@@ -82,13 +97,13 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
       }
     });
     return init;
-  })
+  });
 
 
   useEffect(() => {
     const t = setTimeout(() => {
       const qs = buildQueryString(filters, page, pageSize);
-      console.log("/buses?" + qs);
+      console.log("/vehicles?" + qs);
     }, 300); // 300ms debounce
     return () => clearTimeout(t);
   }, [filters, page, pageSize]);
@@ -100,14 +115,10 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
 
     Object.entries(filters).forEach(([k, v]) => {
       const val = (v ?? "").toString().trim().toLowerCase();
-      if (val !== "") params.set(k, val); // boşları ekleme
+      if (val !== "") params.set(k, val);
     });
-
     return params.toString();
   };
-
-
-
 
   const onFilterChange = (key, value) => {
     setFilters(prev => ({ ...prev, [key]: value }))
@@ -117,6 +128,49 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
     () => COL_ORDER.filter((k) => columnVisibility[k]),
     []
   );
+
+  useEffect(() => {
+    const qs = buildQueryString(filters, page, pageSize);
+    const t = setTimeout(() => {
+      fetchVehicles(qs);
+    }, 300);
+    return () => clearTimeout(t);
+  }, [filters, page, pageSize]);
+
+  const fetchVehicles = async (qs) => {
+    try { inFlight.current.abort?.(); } catch { }
+    const controller = new AbortController();
+    inFlight.current = controller;
+
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`http://localhost:8080/vehicles?${qs}`, { signal: controller.signal });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+
+     
+      // 🔸 Backend formatına birebir uyum:
+      const list = Array.isArray(json.vehicles) ? json.vehicles : [];
+      setRows(list);
+      console.log(rows);
+      setTotal(Number(json.total ?? list.length));
+      // Sayfa bilgilerini de backend’den alalım (UI’da kullanacağız)
+      setPage(Number(json.page ?? 1));
+      setPageSize(Number(json.pageSize ?? 30));
+      setHasMore(Boolean(json.hasMore));
+    } catch (err) {
+      if (err?.name !== "AbortError") {
+        setError(err?.message || "Veri alınamadı");
+        setRows([]);
+        setTotal(0);
+        setHasMore(false);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
 
   const renderCell = (v, key) => {
     const val = v?.[key];
@@ -192,9 +246,29 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
 
           </thead>
           <tbody>
-            {vehicleData.map((v) => (
-              <tr key={v.id}>
-                <td><input type="checkbox" name="" id="" /></td>
+            {loading && (
+              <tr>
+                <td colSpan={visibleKeys.length + 1}>Yükleniyor…</td>
+              </tr>
+            )}
+
+            {!!error && !loading && (
+              <tr>
+                <td colSpan={visibleKeys.length + 1} className="error">
+                  Hata: {error}
+                </td>
+              </tr>
+            )}
+
+            {!loading && !error && rows.length === 0 && (
+              <tr>
+                <td colSpan={visibleKeys.length + 1}>Kayıt bulunamadı.</td>
+              </tr>
+            )}
+
+            {!loading && !error && rows.map((v) => (
+              <tr key={v.id ?? `${v.plate}-${v.trip_no}-${v.edge_code}`}>
+                <td><input type="checkbox" /></td>
                 {visibleKeys.map((key) => (
                   <td key={key}>{renderCell(v, key)}</td>
                 ))}
