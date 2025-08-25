@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter, faArrowsLeftRight} from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter, faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
 import './VehiclesSidebar.css'
 import vehicleData from '../../../data/vehicledatas.json';
 
@@ -55,6 +55,7 @@ const columnVisibility = {
   lon: true,
 };
 
+
 // 4) Basit biçimlendirme yardımcıları (opsiyonel)
 const fmtSpeed = (v) => (typeof v === "number" ? v.toFixed(1) : v);
 const fmtTime = (iso) => {
@@ -71,14 +72,52 @@ const fmtTime = (iso) => {
 const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
   const [vehiclesMinimized, setVehiclesMinimized] = useState(false);
   const [vehiclesExpanded, setVehiclesExpanded] = useState(false);
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(30);
+  const [filters, setFilters] = useState(() => {
+    const init = {};
+    COL_ORDER.forEach((k) => {
+      if (columnVisibility[k]) {
+        init[k] = "";
+      }
+    });
+    return init;
+  })
 
-  // 5) Görünür kolon anahtarları
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const qs = buildQueryString(filters, page, pageSize);
+      console.log("/buses?" + qs);
+    }, 300); // 300ms debounce
+    return () => clearTimeout(t);
+  }, [filters, page, pageSize]);
+
+  const buildQueryString = (filters, page = 1, pageSize = 30) => {
+    const params = new URLSearchParams();
+    params.set("page", String(page));
+    params.set("pageSize", String(pageSize));
+
+    Object.entries(filters).forEach(([k, v]) => {
+      const val = (v ?? "").toString().trim().toLowerCase();
+      if (val !== "") params.set(k, val); // boşları ekleme
+    });
+
+    return params.toString();
+  };
+
+
+
+
+  const onFilterChange = (key, value) => {
+    setFilters(prev => ({ ...prev, [key]: value }))
+    console.log(filters);
+  };
   const visibleKeys = useMemo(
     () => COL_ORDER.filter((k) => columnVisibility[k]),
     []
   );
 
-  // 6) Hücre değerini ilgili key’e göre yazdır
   const renderCell = (v, key) => {
     const val = v?.[key];
 
@@ -87,11 +126,11 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
     if (key === "lat" || key === "lon") {
       return typeof val === "number" ? val.toFixed(6) : val;
     }
-    return val ?? ""; // undefined/null ise boş string
+    return val ?? "";
   };
 
   return (
-    <div className={`vehicles-sidebar-container ${vehiclesMinimized ? "minimized" : ""} ${vehiclesExpanded ? "expanded" : ""}` }>
+    <div className={`vehicles-sidebar-container ${vehiclesMinimized ? "minimized" : ""} ${vehiclesExpanded ? "expanded" : ""}`}>
       <div className="vehicles-header">
         <h2>Vehicles</h2>
         <div className="top-buttons">
@@ -112,10 +151,10 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
           )}
 
           <FontAwesomeIcon
-          icon={faArrowsLeftRight}
-          size="lg"
-          className="expand-btn"
-          onClick={() => setVehiclesExpanded(!vehiclesExpanded)}
+            icon={faArrowsLeftRight}
+            size="lg"
+            className="expand-btn"
+            onClick={() => setVehiclesExpanded(!vehiclesExpanded)}
           />
           <FontAwesomeIcon
             icon={faXmark}
@@ -135,6 +174,22 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
                 <th key={key}>{COL_LABELS[key] ?? key}</th>
               ))}
             </tr>
+            <tr className="filter-row">
+              <th></th>
+              {visibleKeys.map((col) => (
+                <th key={`filter-${col}`}>
+                  <input
+                    key={`input-${col}`}   // 🔑 burası önemli
+                    type="text"
+                    value={filters[col] ?? ""}
+                    onChange={(e) => onFilterChange(col, e.target.value)}
+                    className="col-filter"
+                    placeholder=" "
+                  />
+                </th>
+              ))}
+            </tr>
+
           </thead>
           <tbody>
             {vehicleData.map((v) => (
