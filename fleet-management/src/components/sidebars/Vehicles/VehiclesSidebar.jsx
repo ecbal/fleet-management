@@ -2,6 +2,13 @@ import React, { useMemo, useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter, faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
 import './VehiclesSidebar.css'
+import {
+  toggleVehicleId,
+  setAllVehicleIds,
+  clearAllVehicleIds
+} from "../../../store/selectionSlice";
+import { useSelector, useDispatch } from "react-redux";
+
 
 
 // 1) Kolon başlık metinleri (ekranda görünecek isimler)
@@ -78,15 +85,17 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const inFlight = useRef({ abort: () => { } });
-  const [hasMore,setHasMore] = useState(false);
+  const [hasMore, setHasMore] = useState(false);
+  const selectedVehicleIds = useSelector(state => state.selection.selectedVehicleIds || []);
+  const dispatch = useDispatch();
 
 
   const totalPages = useMemo(() => {
-  if (Number.isFinite(total) && total > 0) {
-    return Math.max(1, Math.ceil(total / pageSize));
-  }
-  return hasMore ? page + 1 : page;
-}, [total, pageSize, hasMore, page]);
+    if (Number.isFinite(total) && total > 0) {
+      return Math.max(1, Math.ceil(total / pageSize));
+    }
+    return hasMore ? page + 1 : page;
+  }, [total, pageSize, hasMore, page]);
 
 
   const [filters, setFilters] = useState(() => {
@@ -149,7 +158,7 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
 
-     
+
       // 🔸 Backend formatına birebir uyum:
       const list = Array.isArray(json.vehicles) ? json.vehicles : [];
       setRows(list);
@@ -182,6 +191,23 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
     }
     return val ?? "";
   };
+
+
+  const handleSelectAllVehicles = async (e) => {
+    const isChecked = e.target.checked;
+    if (isChecked) {
+      const res = await fetch("http://localhost:8080/buses/ids");
+      const data = await res.json();
+      dispatch(setAllVehicleIds(data.vehicleIds));
+    } else {
+      dispatch(clearAllVehicleIds());
+    }
+  };
+
+  const handleVehicleCheckbox = (id) => {
+    dispatch(toggleVehicleId(id));
+  };
+
 
   return (
     <div className={`vehicles-sidebar-container ${vehiclesMinimized ? "minimized" : ""} ${vehiclesExpanded ? "expanded" : ""}`}>
@@ -223,7 +249,13 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
         <table className="vehicles-table">
           <thead>
             <tr>
-              <th> <input type="checkbox" name="" id="" /></th>
+              <th>
+                <input
+                  type="checkbox"
+                  onChange={handleSelectAllVehicles}
+                  checked={rows.length > 0 && selectedVehicleIds.length === rows.length}
+                />
+              </th>
               {visibleKeys.map((key) => (
                 <th key={key}>{COL_LABELS[key] ?? key}</th>
               ))}
@@ -233,7 +265,7 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
               {visibleKeys.map((col) => (
                 <th key={`filter-${col}`}>
                   <input
-                    key={`input-${col}`}   // 🔑 burası önemli
+                    key={`input-${col}`}
                     type="text"
                     value={filters[col] ?? ""}
                     onChange={(e) => onFilterChange(col, e.target.value)}
@@ -243,8 +275,8 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
                 </th>
               ))}
             </tr>
-
           </thead>
+
           <tbody>
             {loading && (
               <tr>
@@ -266,15 +298,26 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
               </tr>
             )}
 
-            {!loading && !error && rows.map((v) => (
-              <tr key={v.id ?? `${v.plate}-${v.trip_no}-${v.edge_code}`}>
-                <td><input type="checkbox" /></td>
-                {visibleKeys.map((key) => (
-                  <td key={key}>{renderCell(v, key)}</td>
-                ))}
-              </tr>
-            ))}
+            {!loading && !error && rows.map((v) => {
+              const isChecked = selectedVehicleIds.includes(v.id);
+
+              return (
+                <tr key={v.id ?? `${v.plate}-${v.trip_no}-${v.edge_code}`}>
+                  <td>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => handleVehicleCheckbox(v.id)}
+                    />
+                  </td>
+                  {visibleKeys.map((key) => (
+                    <td key={key}>{renderCell(v, key)}</td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
+
         </table>
       </div>
     </div>
