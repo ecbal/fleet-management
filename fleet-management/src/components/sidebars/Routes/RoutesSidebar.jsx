@@ -3,14 +3,16 @@ import './RoutesSidebar.css'
 import SearchBar from '../../ui/SearchBar/SearchBar.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter } from '@fortawesome/free-solid-svg-icons'
-import routeDatas from '../../../data/routedatas.json'
 
 const RoutesSidebar = ({onCloseBtn}) => {
   const [routes, setRoutes] = useState([]);
   const [routesMinimized, setRoutesMinimized] = useState(false);
 
   useEffect(() => {
-    setRoutes(routeDatas);
+    fetch("http://localhost:8080/routes")
+      .then((res)=>res.json())
+      .then((data) => setRoutes(data))
+      .catch((err)=>console.error("Hat verisi alinamadi: ",err))
   }, []);
 
 
@@ -46,7 +48,7 @@ const RoutesSidebar = ({onCloseBtn}) => {
             <tr>
               <th><input type="checkbox" /></th>
               <th>ID</th>
-              <th>Durak Adı</th>
+              <th>Hat Adı</th>
             </tr>
           </thead>
           <tbody>
@@ -60,7 +62,6 @@ const RoutesSidebar = ({onCloseBtn}) => {
           </tbody>
         </table>
       </div>
-
     </div>
 
   )

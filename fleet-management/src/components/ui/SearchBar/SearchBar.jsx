@@ -24,6 +24,8 @@ export default function SearchBar({
   onSelect,
   className = "",
   autoFocus = false,
+  autocomplete = true,
+  ...rest // ← TÜM DİĞER input props'ları buraya gelir
 }) {
   const [query, setQuery] = useState(defaultValue);
   const [open, setOpen] = useState(false);
@@ -153,7 +155,9 @@ export default function SearchBar({
           aria-autocomplete="list"
           aria-controls={listId}
           aria-activedescendant={open && highlight >= 0 ? `${listId}-opt-${highlight}` : undefined}
+          {...rest} // ← burası önemli!
         />
+
 
         <span className="searchbar__actions">
           {loading ? (

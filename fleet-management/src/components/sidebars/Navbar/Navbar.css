@@ -14,11 +14,11 @@
 }
 
 .nav-item{
+    width: 90px;
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
+    text-align: center;
     background-color: var(--icon-bg);
     color: var(--icon-fg);
     transition: 0.3s;
