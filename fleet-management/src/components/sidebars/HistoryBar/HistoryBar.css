@@ -1,0 +1,72 @@
+.history-bar-container {
+    position: absolute;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--bg);
+    border-radius: var(--radius);
+    left: 500px;
+    bottom: 20px;
+    width: auto;
+    font-family: var(--font-sans);
+    font-size: 11px;
+
+}
+
+.start-time-select,
+.end-time-select,
+.speed-select,
+.play-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.play-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.play-bar input[type="range"] {
+    flex-grow: 1;
+}
+
+button {
+    background-color: var(--icon-bg);
+    color: var(--icon-fg);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Ortak stil: input, select */
+.history-bar-container input[type="date"],
+.history-bar-container input[type="time"],
+.history-bar-container select {
+    background-color: var(--input-bg);
+    color: var(--input-fg);
+    border: 1px solid var(--brand);
+    border-radius: 6px;
+    
+    font-size: 11px;
+    font-family: inherit;
+    outline: none;
+    min-width: 110px;
+    transition: border-color 0.2s ease;
+}
+
+.history-bar-container input[type="date"]:hover,
+.history-bar-container input[type="time"]:hover,
+.history-bar-container select:hover {
+    border-color: var(--accent, #3399ff);
+}
+
+.history-bar-container label {
+    font-size: 11px;
+    color: var(--label-color, #aaa);
+    margin-bottom: 2px;
+}

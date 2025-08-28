@@ -13,7 +13,8 @@
     transition: left 0.3s ease-in-out;
 }
 
-.nav-item{
+.nav-item,
+.nav-settings{
     width: 90px;
     border-radius: 20px;
     padding-top: 10px;
@@ -24,16 +25,19 @@
     transition: 0.3s;
 }
 
-.nav-item:hover{
+.nav-item:hover,
+.nav-settings:hover{
     background-color: var(--icon-hover);
     transition: 0.3s;
 }
 
-.nav-item.active{
+.nav-item.active,
+.nav-settings.active{
     background-color: var(--icon-active);
 }
 
-.nav-item.active:hover{
+.nav-item.active:hover,
+.nav-settings.active:hover{
     background-color: var(--icon-hover);
 }
 

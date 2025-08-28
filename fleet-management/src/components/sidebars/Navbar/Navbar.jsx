@@ -5,7 +5,9 @@ import {faGear,faBusSimple,faHouse, faRoute, faLocationDot} from "@fortawesome/f
 
 const Navbar = ({
   activeScreen,
-  onNavClick
+  onNavClick,
+  settingsOpen,
+  setSettingsOpen
 }) => {
 
   const buttons = [
@@ -13,7 +15,6 @@ const Navbar = ({
     {key: "stops", icon: <FontAwesomeIcon icon={faLocationDot} size='xl' />},
     {key: "routes", icon: <FontAwesomeIcon icon={faRoute} size='xl' />},
     {key: "vehicles", icon: <FontAwesomeIcon icon={faBusSimple} size='xl' />},
-    {key: "settings", icon: <FontAwesomeIcon icon={faGear} size='xl' />}
   ];
 
 
@@ -29,6 +30,10 @@ const Navbar = ({
           {button.icon}
         </div>
       ))}
+      <div 
+      onClick={()=>setSettingsOpen(!settingsOpen)}
+      className={`nav-settings ${settingsOpen ? "active": ""}`}>
+         <FontAwesomeIcon icon={faGear} size='xl'/></div>
     </div>
   )
 }

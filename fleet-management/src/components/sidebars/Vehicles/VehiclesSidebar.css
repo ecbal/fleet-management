@@ -34,13 +34,17 @@
 
 .top-buttons .close-btn,
 .top-buttons .minimize-btn,
-.top-buttons .expand-btn {
+.top-buttons .expand-btn,
+.top-buttons .history-btn,
+.top-buttons .vehicle-settings-btn {
     margin: 0px 0px 0px 20px;
 }
 
 .top-buttons .close-btn:hover,
 .top-buttons .minimize-btn:hover,
-.top-buttons .expand-btn:hover {
+.top-buttons .expand-btn:hover,
+.top-buttons .history-btn:hover,
+.top-buttons .vehicle-settings-btn:hover {
     transform: scale(1.1);
     transition: 0.1s ease-in-out;
 }
@@ -67,7 +71,7 @@
 .vehicles-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto; 
+    table-layout: auto;
     font-family: var(--font-sans);
     font-size: 11px;
     background: var(--surface);
@@ -109,7 +113,7 @@
 
 .vehicles-table th:first-child,
 .vehicles-table td:first-child {
-    width: 28px;  
+    width: 28px;
 }
 
 .vehicles-table th:nth-child(2),
@@ -145,7 +149,8 @@ input[type='checkbox'] {
 }
 
 .vehicles-sidebar-container.expanded {
-    width: 950px;
+    width: auto;
+    max-width: 950px;
 }
 
 .vehicles-table .filter-row th {
@@ -157,10 +162,10 @@ input[type='checkbox'] {
 .col-filter {
     font-size: 11px;
     width: 100%;
-    max-width: 100px; 
+    max-width: 100px;
     box-sizing: border-box;
     background: #fff;
     border: 1px solid var(--brand);
-    
+
     padding: 4px 1px;
 }

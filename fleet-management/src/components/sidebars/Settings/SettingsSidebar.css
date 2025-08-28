@@ -1,0 +1,15 @@
+.settings-sidebar-container{
+    position: absolute;
+    background-color: var(--bg);
+    right: 20px;
+    top: 20px;
+
+    height: auto;
+    width: 400px;
+    border-radius: var(--radius);
+    font-family: var(--font-sans);
+}
+.settings-sidebar-header{
+    font-size: 12px;
+    margin-left: 13px;
+}

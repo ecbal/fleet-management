@@ -6,11 +6,17 @@ import VehicleInfo from './components/sidebars/VehicleInfo/VehicleInfo'
 import VehiclesSidebar from './components/sidebars/Vehicles/VehiclesSidebar'
 import MapView from './components/map/MapView'
 import Navbar from './components/sidebars/Navbar/Navbar'
-import useDebounce from './hooks/useDebounce'
+import HistoryBar from './components/sidebars/HistoryBar/HistoryBar'
+import { useDebounce } from 'use-debounce'
+import SettingsSidebar from './components/sidebars/Settings/SettingsSidebar'
+import InfoSidebar from './components/sidebars/InfoSidebar/InfoSidebar'
 
 function App() {
 
   const [activeScreen, setActiveScreen] = useState('home');
+  const [historyBarOpen, setHistoryBarOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+
 
   //Stops Things
   const [stops, setStops] = useState([]);
@@ -18,19 +24,18 @@ function App() {
   const [stopsHasMore, setStopsHasMore] = useState(true);
   const [stopsLoading, setStopsLoading] = useState(false);
   const [stopsSearchQuery, setStopsSearchQuery] = useState("");
-  const debouncedStopsSearch = useDebounce(stopsSearchQuery,300);
+  const [debouncedStopsSearch] = useDebounce(stopsSearchQuery, 300);
+  const PAGE_SIZE = 100;
+
   const fetchStops = async (currentStopsPage, currentstopsSearchQuery) => {
     setStopsLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:8080/stops?page=${currentStopsPage}&pageSize=50&search=${encodeURIComponent(currentstopsSearchQuery)}`
+        `http://localhost:8080/stops?page=${currentStopsPage}&pageSize=100&search=${encodeURIComponent(currentstopsSearchQuery)}`
       );
       const data = await res.json();
-      console.log(data);
-
       setStops(prev => {
         const merged = [...prev, ...data.stops];
-
         //to block get same id twice
         const uniqueStops = Array.from(
           new Map(merged.map(stop => [stop.stop_id, stop])).values()
@@ -45,10 +50,6 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    fetchStops(stopsPage, debouncedStopsSearch);
-  }, [stopsPage, debouncedStopsSearch])
-
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setStopsSearchQuery(value);
@@ -56,18 +57,19 @@ function App() {
     setStops([]);
   }
 
+  useEffect(() => {
+    setStopsPage(1);
+    setStops([]);
+  }, [debouncedStopsSearch]);
 
-
+  useEffect(() => {
+    fetchStops(stopsPage, debouncedStopsSearch);
+  }, [stopsPage, debouncedStopsSearch]);
 
 
   const handleNavClick = (screenKey) => {
     setActiveScreen(screenKey);
   }
-
-  useEffect(() => {
-    console.log(activeScreen);
-  }, [activeScreen]);
-
 
 
   return (
@@ -78,21 +80,28 @@ function App() {
           onCloseBtn={handleNavClick}
         />}
 
+        <InfoSidebar />
         {activeScreen === 'vehicles' && <VehiclesSidebar
-          onCloseBtn={handleNavClick} />
+          onCloseBtn={handleNavClick}
+          setHistoryBarOpen={setHistoryBarOpen}
+          historyBarOpen={historyBarOpen} />
         }
 
+        {settingsOpen && <SettingsSidebar />}
+        {historyBarOpen && activeScreen === 'vehicles' && <HistoryBar />}
         {activeScreen === 'stops' && <StopsSidebar
           stops={stops}
           stopsLoading={stopsLoading}
           stopsHasMore={stopsHasMore}
           onSearch={handleSearchChange}
-          onPageEnd={() => setStopsPage(stopsPage + 1)}
+          onPageEnd={() => setStopsPage(p => p + 1)}
           onCloseBtn={handleNavClick}
-          stopsSearchQuery= {stopsSearchQuery}
+          stopsSearchQuery={stopsSearchQuery}
         />}
 
         <Navbar
+          settingsOpen={settingsOpen}
+          setSettingsOpen={setSettingsOpen}
           activeScreen={activeScreen}
           onNavClick={handleNavClick}
         />

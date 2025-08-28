@@ -1,0 +1,73 @@
+.toggle-switch {
+    position: relative;
+    display: inline-flex;
+    --w: 50px;
+    --h: 28px;
+    --pad: 3px;
+    --thumb: calc(var(--h) - var(--pad) * 2);
+    --switch-off: #9ca3af;
+    --switch-on: #109ac4;
+    width: var(--w);
+    height: var(--h);
+    border-radius: var(--h);
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s ease;
+  }
+  
+  /* Track altta, sadece background-color kullan */
+  .toggle-switch > .ts-track {
+    position: absolute;
+    inset: 0;
+    background-color: var(--switch-off);
+    border-radius: var(--h);
+    transition: background-color .25s ease;
+    z-index: 1;
+  }
+  
+  /* Thumb üstte */
+  .toggle-switch > .ts-thumb {
+    position: absolute;
+    left: var(--pad);
+    width: var(--thumb);
+    height: var(--thumb);
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    transform: translateX(0);
+    transition: transform .25s ease;
+    z-index: 2;
+  }
+  
+  /* AÇIK durum – özgüllüğü artır: kök + child seçici */
+  .toggle-switch.is-on > .ts-track {
+    background-color: var(--switch-on); /* yeşil */
+  }
+  .toggle-switch.is-on > .ts-thumb {
+    transform: translateX(calc(var(--w) - var(--thumb) - var(--pad) * 2));
+  }
+  
+  /* Küçük */
+.toggle-switch.ts-sm {
+    --w: 30px;
+    --h: 18px;
+    --pad: 2px;
+  }
+  
+  /* Orta (default) */
+  .toggle-switch.ts-md {
+    --w: 50px;
+    --h: 28px;
+    --pad: 3px;
+  }
+  
+  /* Büyük */
+  .toggle-switch.ts-lg {
+    --w: 64px;
+    --h: 36px;
+    --pad: 4px;
+  }
+  

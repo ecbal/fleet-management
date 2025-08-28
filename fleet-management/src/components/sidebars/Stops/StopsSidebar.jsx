@@ -13,7 +13,8 @@ const StopsSidebar = ({ onCloseBtn, stops, stopsLoading, stopsHasMore, onSearch,
   const selectedStopIds = useSelector(state => state.selection.selectedStopIds);
   const stopsObserver = useRef();
   const [stopsMinimized, setStopsMinimized] = useState(false);
-  const [allStopsIds,setAllStopsIds]=useState(0);
+  const [allStopsIds, setAllStopsIds] = useState(0);
+  const [allStopsCount, setAllStopsCount] = useState(0);
 
   const sentinelRef = useCallback(node => {
     if (stopsLoading) return;
@@ -28,13 +29,30 @@ const StopsSidebar = ({ onCloseBtn, stops, stopsLoading, stopsHasMore, onSearch,
     if (node) stopsObserver.current.observe(node);
   }, [stopsLoading, stopsHasMore]);
 
+  useEffect(() => {
+  setAllStopsIds([]);
+}, [stopsSearchQuery]);
+
   const handleSelectAll = async (e) => {
     const isChecked = e.target.checked;
+    const query = stopsSearchQuery?.trim();
+
     if (isChecked) {
-      const res = await fetch("http://localhost:8080/stops/ids");
-      const data = await res.json();
-      setAllStopsIds(data.stopIds);
-      dispatch(setAllStopIds(data.stopIds)); // örnek: { stopIds: [1,2,3] }
+      const url = query
+        ? `http://localhost:8080/stops/ids?search=${encodeURIComponent(query)}`
+        : "http://localhost:8080/stops/ids";
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        setAllStopsIds(data.stopIds);
+        setAllStopsCount(data.totalCount);
+        dispatch(setAllStopIds(data.stopIds));
+      } catch (err) {
+        console.error("Durak ID'leri alınamadı:", err);
+        alert("Duraklar alınırken hata oluştu.");
+      }
     } else {
       dispatch(clearAllStopIds());
     }
@@ -44,6 +62,15 @@ const StopsSidebar = ({ onCloseBtn, stops, stopsLoading, stopsHasMore, onSearch,
   const handleRowCheckbox = (stop_id) => {
     dispatch(toggleStopId(stop_id));
   };
+
+  const query = stopsSearchQuery?.trim();
+  const allSelected =
+    query
+      ? selectedStopIds.length > 0 &&
+      stops.every((s) => selectedStopIds.includes(s.stop_id))
+      : selectedStopIds.length > 0 &&
+      selectedStopIds.length === allStopsIds.length;
+
 
   return (
     <div className={`stops-sidebar-container ${stopsMinimized ? "minimized" : ""}`}>
@@ -83,7 +110,7 @@ const StopsSidebar = ({ onCloseBtn, stops, stopsLoading, stopsHasMore, onSearch,
               <th><input
                 type="checkbox"
                 onChange={handleSelectAll}
-                checked={selectedStopIds.length === allStopsIds.length}
+                checked={allSelected}
               /></th>
               <th>ID</th>
               <th>Durak Adı</th>
@@ -91,17 +118,17 @@ const StopsSidebar = ({ onCloseBtn, stops, stopsLoading, stopsHasMore, onSearch,
           </thead>
           <tbody>
             {stops.map((s, index) => {
-              const EARLY_TRIGGER_INDEX = Math.max(0, stops.length - 40);
+              const EARLY_TRIGGER_INDEX = Math.max(0, stops.length - 50);
               const isTriggerRow = index === EARLY_TRIGGER_INDEX;
               const checked = selectedStopIds.includes(s.stop_id);
 
               return (
-                <tr key={s.stop_id} ref={isTriggerRow ? sentinelRef : null} onClick={() => handleRowCheckbox(s.stop_id)}> 
+                <tr key={s.stop_id} ref={isTriggerRow ? sentinelRef : null} onClick={() => handleRowCheckbox(s.stop_id)}>
                   <td><input
                     type="checkbox"
                     checked={checked}
-                    onChange={() => handleRowCheckbox(s.stop_id)}/></td>
-                    
+                    onClick={(e) => e.stopPropagation()}
+                    onChange={() => handleRowCheckbox(s.stop_id)} /></td>
                   <td>{s.stop_id}</td>
                   <td>{s.stop_name}</td>
                 </tr>

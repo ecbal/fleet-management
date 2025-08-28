@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter, faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faClockRotateLeft, faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter, faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
 import './VehiclesSidebar.css'
 import {
   toggleVehicleId,
@@ -8,6 +8,7 @@ import {
   clearAllVehicleIds
 } from "../../../store/selectionSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { useDebounce } from 'use-debounce';
 
 
 
@@ -45,8 +46,7 @@ const COL_ORDER = [
   "lon",
 ];
 
-// 3) Şimdilik örnek görünürlük objesi (ileride Redux'tan gelecek)
-const columnVisibility = {
+const DEFAULT_COL_VIS = {
   id: true,
   plate: true,
   line: true,
@@ -61,7 +61,6 @@ const columnVisibility = {
   lon: true,
 };
 
-
 // 4) Basit biçimlendirme yardımcıları (opsiyonel)
 const fmtSpeed = (v) => (typeof v === "number" ? v.toFixed(1) : v);
 const fmtTime = (iso) => {
@@ -75,7 +74,7 @@ const fmtTime = (iso) => {
   }
 };
 
-const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
+const VehiclesSidebar = ({ onCloseBtn, historyBarOpen, setHistoryBarOpen }) => {
   const [vehiclesMinimized, setVehiclesMinimized] = useState(false);
   const [vehiclesExpanded, setVehiclesExpanded] = useState(false);
   const [page, setPage] = useState(1);
@@ -88,6 +87,18 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
   const [hasMore, setHasMore] = useState(false);
   const selectedVehicleIds = useSelector(state => state.selection.selectedVehicleIds || []);
   const dispatch = useDispatch();
+  const [openSettings, setOpenSettings] = useState(false);
+
+
+  // localStorage’dan yükle, yoksa default
+  const [columnVisibility, setColumnVisibility] = useState(() => {
+    try {
+      const raw = localStorage.getItem("veh_col_vis");
+      return raw ? JSON.parse(raw) : DEFAULT_COL_VIS;
+    } catch {
+      return DEFAULT_COL_VIS;
+    }
+  });
 
 
   const totalPages = useMemo(() => {
@@ -108,14 +119,12 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
     return init;
   });
 
+  const [debouncedFilters] = useDebounce(filters, 300);
 
   useEffect(() => {
-    const t = setTimeout(() => {
-      const qs = buildQueryString(filters, page, pageSize);
-      console.log("/vehicles?" + qs);
-    }, 300); // 300ms debounce
-    return () => clearTimeout(t);
-  }, [filters, page, pageSize]);
+    const qs = buildQueryString(debouncedFilters, page, pageSize);
+    fetchVehicles(qs);
+  }, [debouncedFilters, page, pageSize]);
 
   const buildQueryString = (filters, page = 1, pageSize = 30) => {
     const params = new URLSearchParams();
@@ -135,16 +144,14 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
   };
   const visibleKeys = useMemo(
     () => COL_ORDER.filter((k) => columnVisibility[k]),
-    []
+    [columnVisibility]
   );
 
   useEffect(() => {
-    const qs = buildQueryString(filters, page, pageSize);
-    const t = setTimeout(() => {
-      fetchVehicles(qs);
-    }, 300);
-    return () => clearTimeout(t);
-  }, [filters, page, pageSize]);
+    try {
+      localStorage.setItem("veh_col_vis", JSON.stringify(columnVisibility));
+    } catch { }
+  }, [columnVisibility]);
 
   const fetchVehicles = async (qs) => {
     try { inFlight.current.abort?.(); } catch { }
@@ -158,13 +165,10 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
 
-
-      // 🔸 Backend formatına birebir uyum:
       const list = Array.isArray(json.vehicles) ? json.vehicles : [];
       setRows(list);
       console.log(rows);
       setTotal(Number(json.total ?? list.length));
-      // Sayfa bilgilerini de backend’den alalım (UI’da kullanacağız)
       setPage(Number(json.page ?? 1));
       setPageSize(Number(json.pageSize ?? 30));
       setHasMore(Boolean(json.hasMore));
@@ -196,7 +200,7 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
   const handleSelectAllVehicles = async (e) => {
     const isChecked = e.target.checked;
     if (isChecked) {
-      const res = await fetch("http://localhost:8080/buses/ids");
+      const res = await fetch("http://localhost:8080/vehicles/ids");
       const data = await res.json();
       dispatch(setAllVehicleIds(data.vehicleIds));
     } else {
@@ -214,6 +218,19 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
       <div className="vehicles-header">
         <h2>Vehicles</h2>
         <div className="top-buttons">
+          <FontAwesomeIcon
+            icon={faGear}
+            size='lg'
+            className='vehicle-settings-btn'
+            onClick={() => setOpenSettings((s)=>!s)}
+          />
+          
+          <FontAwesomeIcon
+            icon={faClockRotateLeft}
+            size='lg'
+            className='history-btn'
+            onClick={() => setHistoryBarOpen(!historyBarOpen)}
+          />
           {vehiclesMinimized ? (
             <FontAwesomeIcon
               icon={faUpRightAndDownLeftFromCenter}
@@ -229,7 +246,6 @@ const VehiclesSidebar = ({ onCloseBtn, vehicles = [] }) => {
               onClick={() => setVehiclesMinimized(true)}
             />
           )}
-
           <FontAwesomeIcon
             icon={faArrowsLeftRight}
             size="lg"
