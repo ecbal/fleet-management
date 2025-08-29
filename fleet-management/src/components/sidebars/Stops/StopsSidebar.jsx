@@ -4,13 +4,13 @@ import SearchBar from '../../ui/SearchBar/SearchBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from "react-redux";
-import { toggleStopId, setAllStopIds, clearAllStopIds } from "../../../store/selectionSlice";
+import { toggleStopId, setAllStopIds, clearAllStopIds } from "../../../store/mapSlice";
 
 
 
 const StopsSidebar = ({ onCloseBtn, stops, stopsLoading, stopsHasMore, onSearch, onPageEnd, stopsSearchQuery }) => {
   const dispatch = useDispatch();
-  const selectedStopIds = useSelector(state => state.selection.selectedStopIds);
+  const selectedStopIds = useSelector(state => state.map.selectedStopIds);
   const stopsObserver = useRef();
   const [stopsMinimized, setStopsMinimized] = useState(false);
   const [allStopsIds, setAllStopsIds] = useState(0);

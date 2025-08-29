@@ -28,7 +28,7 @@
     border-bottom-left-radius: 20px;
 }
 
-.infosidebar-toggle:hover{
+.infosidebar-toggle:hover {
     transform: scale(1.09);
     transition: 0.1s all;
 }
@@ -48,7 +48,7 @@
 }
 
 .infosidebar-tabs {
-    position:relative;
+    position: relative;
     display: flex;
     padding-left: 13px;
     padding-right: 13px;
@@ -65,7 +65,61 @@
     transition: 0.3s all;
 }
 
-.stops-tab-header{
+.stops-tab-header,
+.vehicles-tab-header,
+.routes-tab-header {
     margin-left: 13px;
     font-size: 15px;
+}
+
+.selected-stops-table,
+.selected-routes-table,
+.selected-vehicles-table {
+    margin-left: 13px;
+}
+
+
+.selected-vehicles-table th,
+.selected-vehicles-table td {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    min-width: 35px;
+    padding: 0px 4px 0px 4px;
+}
+
+
+.selected-vehicles-table tr {
+    transform: translateZ(0);
+}
+
+.selected-vehicles-table th:first-child,
+.selected-vehicles-table td:first-child {
+    width: 28px;
+}
+
+.selected-vehicles-table th:nth-child(2),
+.selected-vehicles-table td:nth-child(2) {
+    width: 50px;
+}
+
+
+.selected-vehicles-table th:nth-child(3),
+.selected-vehicles-table td:nth-child(3) {
+    width: 90px;
+    /* Plaka */
+}
+
+.selected-vehicles-table tbody tr:nth-child(odd) {
+    background: var(--surface);
+}
+
+.selected-vehicles-table tbody tr:nth-child(even) {
+    background: var(--bg-soft);
+}
+
+.selected-vehicles-table tbody tr:hover {
+    background: var(--surface-hover);
 }

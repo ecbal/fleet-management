@@ -1,9 +1,8 @@
-// src/store/index.js
 import { configureStore } from "@reduxjs/toolkit";
-import selectionReducer from "./selectionSlice";
+import mapReducer from "./mapSlice";
 
 export const store = configureStore({
   reducer: {
-    selection: selectionReducer,
-  }
+    map: mapReducer,
+  },
 });

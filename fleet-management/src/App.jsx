@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import './App.css'
 import RoutesSidebar from './components/sidebars/Routes/RoutesSidebar'
 import StopsSidebar from './components/sidebars/Stops/StopsSidebar'
@@ -18,13 +18,17 @@ function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
 
 
+  //Map
+    const mapRef = useRef();
+
+
   //Stops Things
   const [stops, setStops] = useState([]);
   const [stopsPage, setStopsPage] = useState(1);
   const [stopsHasMore, setStopsHasMore] = useState(true);
   const [stopsLoading, setStopsLoading] = useState(false);
   const [stopsSearchQuery, setStopsSearchQuery] = useState("");
-  const [debouncedStopsSearch] = useDebounce(stopsSearchQuery, 300);
+  const [debouncedStopsSearch] = useDebounce(stopsSearchQuery, 200);
   const PAGE_SIZE = 100;
 
   const fetchStops = async (currentStopsPage, currentstopsSearchQuery) => {
@@ -75,7 +79,11 @@ function App() {
   return (
     <>
       <div className='app-container'>
-        <MapView />
+        <MapView
+          stops = {stops}
+          darkMode = {false}
+          isMapFull = {true}
+           />
         {activeScreen === 'routes' && <RoutesSidebar
           onCloseBtn={handleNavClick}
         />}

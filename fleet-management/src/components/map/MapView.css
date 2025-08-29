@@ -1,10 +1,140 @@
+/* MapView.css — refined */
+
+:root {
+  --map-popup-bg: rgba(20, 20, 20, 0.55);
+  --map-popup-text: #fff;
+  --map-popup-blur: 10px;
+  --map-popup-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  --map-popup-radius: 14px;
+  --map-popup-border: 1px solid rgba(255,255,255,0.12);
+
+  --map-focus-ring: 0 0 0 3px rgba(59,130,246,0.45);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --map-popup-bg: rgba(255,255,255,0.85);
+    --map-popup-text: #0f172a;
+    --map-popup-border: 1px solid rgba(2,6,23,0.06);
+  }
+}
+
+/* Container */
 .map-container {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    touch-action: pan-x pan-y;
-    background: #dfdfdf;
-    /* map load öncesi hoş bir arka plan */
-    transition: height 180ms ease;
-    will-change: height;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  touch-action: pan-x pan-y;
+  background: #0b0f1a; /* map load öncesi hoş bir arka plan */
+  transition: height 180ms ease;
+  will-change: height;
+}
+.map-container.full {
+  height: 100vh;
+}
+
+/* MapLibre built-ins tweak */
+.maplibregl-canvas {
+  outline: none;
+}
+
+/* Popup */
+.maplibregl-popup {
+  color: var(--map-popup-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  /* Gece-gündüz uyumlu, cam efekti */
+  background: transparent;
+  filter: drop-shadow(0 6px 24px rgb(255, 255, 255));
+}
+
+/* İçerik kutusu */
+.maplibregl-popup-content {
+  color: var(--map-popup-text);
+  background: var(--map-popup-bg);
+  -webkit-backdrop-filter: blur(var(--map-popup-blur));
+  backdrop-filter: blur(var(--map-popup-blur));
+  border: var(--map-popup-border);
+  border-radius: var(--map-popup-radius);
+  padding: 10px 12px;
+  box-shadow: var(--map-popup-shadow);
+  max-width: min(70vw, 320px);
+}
+
+/* Ok (tip) rengini içerikle hizala */
+.maplibregl-popup-tip {
+  border-top-color: var(--map-popup-bg) !important;
+  border-bottom-color: var(--map-popup-bg) !important;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+/* Kapat butonu */
+.maplibregl-popup-close-button {
+  display: none;
+}
+
+/* Yüksek DPI kenar yumuşatma */
+.maplibregl-marker,
+.maplibregl-popup,
+.maplibregl-canvas {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animasyon azaltma tercihi */
+@media (prefers-reduced-motion: reduce) {
+  .map-container {
+    transition: none;
+  }
+  .maplibregl-popup,
+  .maplibregl-popup-close-button {
+    transition: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .map-container {
+    height: 62vh;
+  }
+  .map-container.full {
+    height: 100vh;
+  }
+  .maplibregl-popup-content {
+    padding: 10px;
+    max-width: 86vw;
+  }
+}
+
+/* Küçük ince dokunuşlar: seçim ve linkler */
+.maplibregl-popup-content ::selection {
+  background: rgba(125, 211, 252, 0.35);
+}
+
+/* Opsiyonel: popup içindeki başlık/altbaşlık/etiketleri güzelleştirme */
+.maplibregl-popup-content .popup-title {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  margin-bottom: 6px;
+}
+.maplibregl-popup-content .popup-subtle {
+  opacity: 0.85;
+  font-size: 11px;
+}
+.maplibregl-popup-content .badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.07);
+  margin-left: 6px;
+}
+@media (prefers-color-scheme: light) {
+  .maplibregl-popup-content .badge {
+    border-color: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.04);
+  }
 }

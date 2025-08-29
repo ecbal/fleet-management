@@ -4,13 +4,13 @@ import SearchBar from '../../ui/SearchBar/SearchBar.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useDispatch, useSelector } from "react-redux";
 import { faXmark, faUpRightAndDownLeftFromCenter, faDownLeftAndUpRightToCenter } from '@fortawesome/free-solid-svg-icons'
-import { toggleRoutesId } from "../../../store/selectionSlice";
+import { toggleRoutesId } from "../../../store/mapSlice.js";
 
 const RoutesSidebar = ({ onCloseBtn }) => {
   const dispatch = useDispatch();
   const [routes, setRoutes] = useState([]);
   const [routesMinimized, setRoutesMinimized] = useState(false);
-  const selectedRouteIds = useSelector(state => state.selection.selectedRouteIds);
+  const selectedRouteIds = useSelector(state => state.map.selectedRouteIds);
 
   useEffect(() => {
     fetch("http://localhost:8080/routes")

@@ -1,13 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const selectionSlice = createSlice({
-  name: "selection",
+  name: "map",
   initialState: {
     selectedStopIds: [],
     selectedVehicleIds: [],
     selectedRouteIds: [],
+    vehiclePositions: {},
   },
   reducers: {
+    updateVehiclePositions: (state, action) => {
+      const arr = action.payload; // WS’ten gelen tüm array
+      arr.forEach(p => {
+        if (state.selectedVehicles.includes(p.vehicle_id)) {
+          state.vehiclePositions[p.vehicle_id] = p;
+        }
+      });
+    },
+
     toggleStopId(state, action) {
       const id = action.payload;
 
@@ -55,5 +65,5 @@ const selectionSlice = createSlice({
   }
 });
 
-export const { toggleStopId, setAllStopIds, clearAllStopIds, toggleVehicleId, setAllVehicleIds, clearAllVehicleIds,toggleRoutesId } = selectionSlice.actions;
+export const {updateVehiclePositions,toggleStopId, setAllStopIds, clearAllStopIds, toggleVehicleId, setAllVehicleIds, clearAllVehicleIds,toggleRoutesId } = selectionSlice.actions;
 export default selectionSlice.reducer;

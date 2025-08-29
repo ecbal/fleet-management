@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.5",
     "@reduxjs/toolkit": "^2.8.2",
+    "maplibre-gl": "^5.7.0",
     "react": "^19.1.1",
     "react-data-table-component": "^7.7.0",
     "react-dom": "^19.1.1",

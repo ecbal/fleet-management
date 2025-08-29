@@ -6,7 +6,7 @@ import {
   toggleVehicleId,
   setAllVehicleIds,
   clearAllVehicleIds
-} from "../../../store/selectionSlice";
+} from "../../../store/mapSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useDebounce } from 'use-debounce';
 
@@ -85,7 +85,7 @@ const VehiclesSidebar = ({ onCloseBtn, historyBarOpen, setHistoryBarOpen }) => {
   const [error, setError] = useState(null);
   const inFlight = useRef({ abort: () => { } });
   const [hasMore, setHasMore] = useState(false);
-  const selectedVehicleIds = useSelector(state => state.selection.selectedVehicleIds || []);
+  const selectedVehicleIds = useSelector(state => state.map.selectedVehicleIds || []);
   const dispatch = useDispatch();
   const [openSettings, setOpenSettings] = useState(false);
 
